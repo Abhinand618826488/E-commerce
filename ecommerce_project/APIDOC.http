@@ -1,0 +1,110 @@
+###
+POST http://127.0.0.1:8000/products/
+Content-Type: application/json
+
+{
+    "name": "Wireless Mouse",
+    "description": "Wireless optical mouse",
+    "category": "Electronics",
+    "price": "799.00",
+    "stock": 25
+}
+
+###
+GET http://127.0.0.1:8000/products/
+#display all products
+
+###
+GET http://127.0.0.1:8000/products/1/
+#display one product
+
+###
+PUT http://127.0.0.1:8000/products/1/
+Content-Type: application/json
+
+{
+    "name": "Gaming Mouse",
+    "description": "RGB gaming mouse",
+    "category": "Electronics",
+    "price": "1299.00",
+    "stock": 15
+}
+#update a product
+
+###
+DELETE http://127.0.0.1:8000/products/1/
+#delete a product
+
+#CUSTOMER API
+###
+POST http://127.0.0.1:8000/customers/
+Content-Type: application/json
+
+{
+    "name": "Arun Kumar",
+    "email": "arun@example.com",
+    "phone": "9876543210",
+    "address": "Kochi, Kerala"
+}
+
+###
+GET http://127.0.0.1:8000/customers/
+#display all customers
+
+###
+GET http://127.0.0.1:8000/customers/1/
+#diplay one customer
+
+###
+PUT http://127.0.0.1:8000/customers/1/
+Content-Type: application/json
+
+{
+    "name": "Arun Kumar",
+    "email": "arun@example.com",
+    "phone": "9123456780",
+    "address": "Ernakulam, Kerala"
+}
+#update customer
+
+###
+DELETE http://127.0.0.1:8000/customers/1/
+#delete customer
+
+#ORDER APIs
+###
+POST http://127.0.0.1:8000/orders/
+Content-Type: application/json
+
+{
+    "customer": 1,
+    "product": 1,
+    "quantity": 2,
+    "status": "Pending"
+}
+#create order
+
+###
+GET http://127.0.0.1:8000/orders/
+#display all orders
+
+###
+GET http://127.0.0.1:8000/orders/1/
+#display one order
+
+###
+PUT http://127.0.0.1:8000/orders/1/
+Content-Type: application/json
+
+{
+    "customer": 1,
+    "product": 1,
+    "quantity": 3,
+    "status": "Confirmed"
+}
+#update order
+
+###
+DELETE http://127.0.0.1:8000/orders/1/
+#delete an order
+
